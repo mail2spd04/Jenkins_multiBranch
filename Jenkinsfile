@@ -14,7 +14,7 @@ stage('Continuousbuild_loans')
 
 stage('continuous deployment') 
      {
-             sh 'scp  /home/ubuntu/.jenkins/workspace/DevPipe/webapp/target/webapp.war   ubuntu@172.31.35.251:/var/lib/tomcat9/webapps/qaenv.war'
+             sh 'scp  /home/ubuntu/.jenkins/workspace/Jenkins_multiBranch/webapp/target/webapp.war   ubuntu@172.31.35.251:/var/lib/tomcat9/webapps/qaenv.war'
      }
 stage('continuous testing')
 	{
@@ -22,7 +22,7 @@ stage('continuous testing')
 	}
 stage('continuous delivery') 
      {
-             sh 'scp  /home/ubuntu/.jenkins/workspace/DevPipe/webapp/target/webapp.war   ubuntu@172.31.36.186:/var/lib/tomcat9/webapps/prodenv.war'
+             sh 'scp  /home/ubuntu/.jenkins/workspace/Jenkins_multiBranch/webapp/target/webapp.war   ubuntu@172.31.36.186:/var/lib/tomcat9/webapps/prodenv.war'
      }
 
 }
