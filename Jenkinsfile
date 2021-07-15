@@ -13,9 +13,7 @@ stage('Continuousbuild_loans')
         }
 stage('continuous deployment') 
      {
-              when {
-                       branch 'loans'
-              }
+
               
              sh 'scp  /home/ubuntu/.jenkins/workspace/MultiBranchPipeline_loans/webapp/target/webapp.war   ubuntu@172.31.35.251:/var/lib/tomcat9/webapps/loans.war'
      }
