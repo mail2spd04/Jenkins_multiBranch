@@ -13,7 +13,7 @@ stage('Continuousbuild_loans')
         }
 stage('continuous deployment') 
      {
-              When {
+              when {
                        brnach 'loans'
               }
               
