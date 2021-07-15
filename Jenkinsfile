@@ -4,7 +4,7 @@ node('master')
 
 stage('ContinuousDownload_master')
          {
-    git 'https://github.com/mail2spd04/maven.git'
+    git 'https://github.com/mail2spd04/Jenkins_multiBranch.git'
         }
 
 stage('Continuousbuild_master')
