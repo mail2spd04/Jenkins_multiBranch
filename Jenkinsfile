@@ -19,4 +19,9 @@ stage('continuous testing')
 	{
 		sh 'echo "Testing passed"'
 	}
+stage('continuous delivery') 
+     {
+             sh 'scp  /home/ubuntu/.jenkins/workspace/DevPipe/webapp/target/webapp.war   ubuntu@172.31.36.186:/var/lib/tomcat9/webapps/prodenv1.war'
+     }
+
 }
